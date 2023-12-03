@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/centerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#FF5722"
+        android:text="Center"/>
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="10dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/centerButton"
+        android:layout_marginBottom="10dp"
+        android:background="#ff8800"/>
+
+    <View
+        android:id="@+id/bottomView"
+        android:layout_width="10dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/centerButton"
+        android:layout_marginTop="10dp"
+        android:background="#4caf50"/>
+
+    <View
+        android:id="@+id/startView"
+        android:layout_width="100dp"
+        android:layout_height="10dp"
+        android:layout_toStartOf="@id/centerButton"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:background="#0088ff"/>
+
+    <View
+        android:id="@+id/endView"
+        android:layout_width="100dp"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/centerButton"
+        android:layout_marginStart="10dp"
+        android:background="#ff88ff"/>
+
+    <TextView
+        android:id="@+id/parentTopStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4caf50"
+        android:padding="10dp"
+        android:text="Top start parent"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/parentTopEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="#4caf50"
+        android:padding="10dp"
+        android:text="Top end parent"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/parentBottomStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#4caf50"
+        android:padding="10dp"
+        android:text="Bottom start parent"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="#4caf50"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:text="Bottom end parent"/>
+
+
+    <TextView
+        android:id="@+id/topStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/startView"
+        android:layout_alignTop="@id/topView"
+        android:background="#e91e63"
+        android:padding="10dp"
+        android:text="Top start"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/topEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/topView"
+        android:layout_alignEnd="@id/endView"
+        android:background="#e91e63"
+        android:padding="10dp"
+        android:text="Top end"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/bottomStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bottomView"
+        android:layout_alignStart="@id/startView"
+        android:padding="10dp"
+        android:text="Bottom start"
+        android:textColor="#fff"
+        android:background="#e91e63"/>
+
+    <TextView
+        android:id="@+id/bottomEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/endView"
+        android:layout_alignBottom="@id/bottomView"
+        android:padding="10dp"
+        android:background="#e91e63"
+        android:text="Bottom end"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/betweenToViews"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:layout_toStartOf="@id/parentTopEnd"
+        android:layout_toEndOf="@id/parentTopStart"
+        android:background="#ff5722"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Between to views"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/betweenToViewsVertically"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_above="@id/bottomEnd"
+        android:layout_below="@id/topEnd"
+        android:layout_alignParentEnd="true"
+        android:background="#ff5722"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="V\ne\nr\nt\ni\nc\na\nl"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/fromStartOfOneToEndOfAnother"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/topView"
+        android:layout_alignStart="@id/topStart"
+        android:layout_alignEnd="@id/topEnd"
+        android:layout_marginBottom="40dp"
+        android:background="#009688"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="From start of one to end of another"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/fromTopToBottom"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/fromStartOfOneToEndOfAnother"
+        android:layout_alignBottom="@id/bottomStart"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="#009688"
+        android:text="F\nr\no\nm\n\nt\no\np\n\nt\no\n\nb\no\nt\nt\no\nm"
+        android:textColor="#fff"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#BABDBF"
+        android:layout_below="@id/bottomStart"
+        android:layout_above="@id/parentBottomStart"
+        android:layout_alignStart="@id/bottomStart"
+        android:layout_alignEnd="@id/bottomEnd">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Center between 4 views"
+            android:padding="10dp"
+            android:background="#2196f3"
+            android:textColor="#fff"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#BABDBF"
+        android:layout_below="@id/parentTopStart"
+        android:layout_above="@id/fromTopToBottom"
+        android:layout_alignStart="@id/parentTopStart"
+        android:layout_alignEnd="@id/parentTopStart">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:text="Top center"
+            android:background="#2196f3"
+            android:textColor="#fff"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/betweenToViews"
+        android:background="#BABDBF"
+        android:layout_above="@id/fromStartOfOneToEndOfAnother"
+        android:layout_alignStart="@id/betweenToViews"
+        android:layout_toStartOf="@id/parentTopEnd">
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="11sp"
+            android:text="Add new" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
